@@ -1,0 +1,39 @@
+
+<br>
+
+<label>
+  Mail:
+  <input type="text" [formControl]="mail">
+</label>
+
+
+<label>
+  Mot de passe:
+  <input type="text" [formControl]="mot_de_passe">
+</label>
+
+<label>
+  <input type="text" [formControl]="informations" style="width:500px;">
+</label>
+
+<!--
+<p>
+  mail: {{ mail.value }}
+</p>
+
+<p>
+  mot_de_passe: {{ mot_de_passe.value }}
+</p>
+-->
+
+
+<p>
+  <button (click)="checkNameAndPassword()">Entrez</button>
+</p>
+
+
+<!--
+<p *ngIf="product.price > 700">
+  <button (click)="notify.emit()">Notify Me</button>
+</p>
+-->
