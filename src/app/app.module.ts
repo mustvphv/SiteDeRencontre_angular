@@ -6,10 +6,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { CartService } from './cart.service';
-import { CartComponent } from './cart/cart.component';
-import { Connexion_page_acceuilComponent } from './cart/connexion_page_acceuil/connexion_page_acceuil.component';
-import { Inscription_page_acceuilComponent } from './cart/inscription_page_acceuil/inscription_page_acceuil.component';
+import { Connexion_page_acceuilComponent } from './connexion_page_acceuil/connexion_page_acceuil.component';
+import { Inscription_page_acceuilComponent } from './inscription_page_acceuil/inscription_page_acceuil.component';
 
 
 @NgModule({
@@ -18,7 +16,6 @@ import { Inscription_page_acceuilComponent } from './cart/inscription_page_acceu
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: 'cart', component: CartComponent },
       { path: 'connexion_page_acceuil', component: Connexion_page_acceuilComponent },
       { path: 'inscription_page_acceuil', component: Inscription_page_acceuilComponent },
     ])
@@ -26,12 +23,11 @@ import { Inscription_page_acceuilComponent } from './cart/inscription_page_acceu
   declarations: [
     AppComponent,
     TopBarComponent,
-    CartComponent,
     Connexion_page_acceuilComponent,
     Inscription_page_acceuilComponent
   ],
   bootstrap: [ AppComponent ],
-  providers: [CartService]
+  providers: []
 })
 export class AppModule { }
 
