@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -8,10 +9,12 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { Connexion_page_acceuilComponent } from './connexion_page_acceuil/connexion_page_acceuil.component';
 import { Inscription_page_acceuilComponent } from './inscription_page_acceuil/inscription_page_acceuil.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 @NgModule({
   imports: [
+    NgbModule,  
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
@@ -24,7 +27,8 @@ import { Inscription_page_acceuilComponent } from './inscription_page_acceuil/in
     AppComponent,
     TopBarComponent,
     Connexion_page_acceuilComponent,
-    Inscription_page_acceuilComponent
+    Inscription_page_acceuilComponent,
+    CarouselComponent
   ],
   bootstrap: [ AppComponent ],
   providers: []
