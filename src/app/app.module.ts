@@ -10,7 +10,9 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { Connexion_page_acceuilComponent } from './connexion_page_acceuil/connexion_page_acceuil.component';
 import { Inscription_page_acceuilComponent } from './inscription_page_acceuil/inscription_page_acceuil.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ProfilUtilisateurComponent } from './profil-utilisateur/profil-utilisateur.component';
 
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   imports: [
@@ -18,17 +20,15 @@ import { CarouselComponent } from './carousel/carousel.component';
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: 'connexion_page_acceuil', component: Connexion_page_acceuilComponent },
-      { path: 'inscription_page_acceuil', component: Inscription_page_acceuilComponent },
-    ])
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
     Connexion_page_acceuilComponent,
     Inscription_page_acceuilComponent,
-    CarouselComponent
+    CarouselComponent,
+    ProfilUtilisateurComponent
   ],
   bootstrap: [ AppComponent ],
   providers: []
