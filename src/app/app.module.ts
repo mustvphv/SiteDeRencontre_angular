@@ -11,6 +11,7 @@ import { Connexion_page_acceuilComponent } from './connexion_page_acceuil/connex
 import { Inscription_page_acceuilComponent } from './inscription_page_acceuil/inscription_page_acceuil.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProfilUtilisateurComponent } from './profil-utilisateur/profil-utilisateur.component';
+import { PageAcceuilComponent } from './page-acceuil/page-acceuil.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -28,7 +29,8 @@ import { AppRoutingModule } from './app-routing.module';
     Connexion_page_acceuilComponent,
     Inscription_page_acceuilComponent,
     CarouselComponent,
-    ProfilUtilisateurComponent
+    ProfilUtilisateurComponent,
+    PageAcceuilComponent
   ],
   bootstrap: [ AppComponent ],
   providers: []
