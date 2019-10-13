@@ -1,6 +1,6 @@
 export class Infos {
     name: String;
     genre: String;
-    status: String;
+    job: String;
     email: String;
 }
