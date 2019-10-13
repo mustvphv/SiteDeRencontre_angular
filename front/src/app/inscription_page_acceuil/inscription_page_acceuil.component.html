@@ -1,0 +1,62 @@
+<app-top-bar></app-top-bar>
+
+<br>
+
+<label>
+  Mail:
+  <input type="text" [formControl]="mail">
+</label>
+
+<br>
+
+<label>
+  Mot de passe:
+  <input type="text" [formControl]="mot_de_passe">
+</label>
+
+<br>
+
+<label>
+  Confirmation du mot de passe:
+  <input type="text" [formControl]="mot_de_passe">
+</label>
+
+<br>
+
+<label>
+  Nom:
+  <input type="text" [formControl]="mot_de_passe">
+</label>
+
+<br>
+
+<label>
+  Prénom:
+  <input type="text" [formControl]="mot_de_passe">
+</label>
+
+<br>
+
+<label>
+  Pseudo:
+  <input type="text" [formControl]="mot_de_passe">
+</label>
+
+<br>
+
+<label>
+  <input type="text" [formControl]="informations" style="width:500px;">
+</label>
+
+<p>
+  <button (click)="checkNameAndPassword()">Entrez</button>
+</p>
+
+
+<h2>informationsDuServeur</h2>
+
+<!--<div *ngFor="let product of tableau_products">-->
+
+  <h3>
+      {{ informationsDuServeur[0].id }}
+  </h3>
