@@ -5,13 +5,13 @@
         <div class = "image-container">
             <img src="assets/img/profilimage.jpg" style="width: 100%">
             <div class="title">
-                <h2> Nom Prénom </h2>
+                <h2> {{profile.name}} </h2>
         </div>
         
         <div class="main-container">
-            <p><i class="fa fa-venus-mars informations" aria-hidden="true"></i> Sexe : Homme</p>
-            <p><i class="fa fa-briefcase  informations" aria-hidden="true"></i> Métier : Etudiant</p>
-            <p><i class="fa fa-envelope-o informations" aria-hidden="true"></i> test@gmail.com</p>
+            <p><i class="fa fa-venus-mars informations" aria-hidden="true"></i> {{profile.genre}}</p>
+            <p><i class="fa fa-briefcase  informations" aria-hidden="true"></i> {{profile.job}}</p>
+            <p><i class="fa fa-envelope-o informations" aria-hidden="true"></i> {{profile.mail}}</p>
         
             <hr>
 
