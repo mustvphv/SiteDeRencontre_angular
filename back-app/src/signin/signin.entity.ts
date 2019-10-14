@@ -6,20 +6,44 @@ export class Signin {
     id: number;
 
     @Column()
-    firstName: string;
-
-    @Column()
-    lastName: string;
+    pseudo: string;
 
     @Column()
     email: string;
 
     @Column()
-    phone: string;
+    motDePasse: string;
 
     @Column()
-    city: string;
+    confirmationMotDePasse: string;
 
     @Column()
-    country: string;
+    physiqueGenre: string;
+
+    @Column()
+    physiqueTaille: string;
+
+    @Column()
+    physiqueCouleurPeau: string;
+
+    @Column()
+    physiqueCouleurCheveu: string;
+
+    @Column()
+    physiqueCouleurYeux: string;
+
+    @Column()
+    preferenceGenre: string;
+
+    @Column()
+    preferenceTaille: string;
+
+    @Column()
+    preferenceCouleurPeau: string;
+
+    @Column()
+    preferenceCouleurCheveu: string;
+
+    @Column()
+    preferenceCouleurYeux: string;
 }
