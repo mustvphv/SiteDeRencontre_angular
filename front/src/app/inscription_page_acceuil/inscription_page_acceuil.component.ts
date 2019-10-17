@@ -47,11 +47,11 @@ export class Inscription_page_acceuilComponent implements OnInit {
 
 
   informationsDuServeur = [];
+  incrementeId = -1;
 
-
-  private informationsNouvelUtilisateur = [
+  informationsNouvelUtilisateur = [
     {
-      id: 100,
+      id: this.incrementeId,
       pseudo: this.pseudo.value,
       email: this.email.value,
       motDePasse: this.mot_de_passe.value,
@@ -78,6 +78,28 @@ export class Inscription_page_acceuilComponent implements OnInit {
   }
 
   creerNouvelUtilisateur(){
+
+    this.incrementeId++;
+
+    this.informationsNouvelUtilisateur = [
+      {
+        id: this.incrementeId,
+        pseudo: this.pseudo.value,
+        email: this.email.value,
+        motDePasse: this.mot_de_passe.value,
+        confirmationMotDePasse: this.confirmation_mot_de_passe.value,
+        physiqueGenre: this.physique_genre.value,
+        physiqueTaille: this.physique_taille.value,
+        physiqueCouleurPeau: this.physique_couleur_peau.value,
+        physiqueCouleurCheveu: this.physique_couleur_cheveu.value,
+        physiqueCouleurYeux: this.physique_couleur_yeux.value,
+        preferenceGenre: this.preference_genre.value,
+        preferenceTaille: this.preference_taille.value,
+        preferenceCouleurPeau: this.preference_couleur_peau.value,
+        preferenceCouleurCheveu: this.preference_couleur_cheveu.value,
+        preferenceCouleurYeux: this.preference_couleur_yeux.value
+      }
+    ];
 
     return this.httpClient
       .post('http://localhost:3000/signin/create', this.informationsNouvelUtilisateur)
