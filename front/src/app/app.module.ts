@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -12,6 +13,7 @@ import { Inscription_page_acceuilComponent } from './inscription_page_acceuil/in
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProfilUtilisateurComponent } from './profil-utilisateur/profil-utilisateur.component';
 import { PageAcceuilComponent } from './page-acceuil/page-acceuil.component';
+import { RencontresComponent } from './rencontres/rencontres.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -21,7 +23,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxUsefulSwiperModule 
   ],
   declarations: [
     AppComponent,
@@ -30,7 +33,8 @@ import { AppRoutingModule } from './app-routing.module';
     Inscription_page_acceuilComponent,
     CarouselComponent,
     ProfilUtilisateurComponent,
-    PageAcceuilComponent
+    PageAcceuilComponent,
+    RencontresComponent
   ],
   bootstrap: [ AppComponent ],
   providers: []
