@@ -12,7 +12,7 @@ export class RencontresComponent implements OnInit {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
-    spaceBetween: 60
+    spaceBetween: 200
   };
   	
   constructor() { }
