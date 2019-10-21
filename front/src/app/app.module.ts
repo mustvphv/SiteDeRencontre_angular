@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { WavesModule, ButtonsModule, IconsModule } from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -16,6 +17,7 @@ import { PageAcceuilComponent } from './page-acceuil/page-acceuil.component';
 import { RencontresComponent } from './rencontres/rencontres.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { FootBarComponent } from './foot-bar/foot-bar.component';
 
 @NgModule({
   imports: [
@@ -24,7 +26,10 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    NgxUsefulSwiperModule 
+    NgxUsefulSwiperModule, 
+    WavesModule,
+    ButtonsModule,
+    IconsModule
   ],
   declarations: [
     AppComponent,
@@ -34,7 +39,8 @@ import { AppRoutingModule } from './app-routing.module';
     CarouselComponent,
     ProfilUtilisateurComponent,
     PageAcceuilComponent,
-    RencontresComponent
+    RencontresComponent,
+    FootBarComponent
   ],
   bootstrap: [ AppComponent ],
   providers: []
