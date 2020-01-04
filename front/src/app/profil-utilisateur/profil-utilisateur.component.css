@@ -1,0 +1,60 @@
+.stylefont
+{
+    font-family: sans-serif;
+    color: #3C3939;
+    background-color: #f1f1f1; 
+}
+
+.profile-card
+{
+    width: 400px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5);
+}
+
+.image-container
+{
+    position: relative;
+}
+
+.informations
+{
+    margin-right: 16px;
+}
+
+.main-container
+{
+    padding: 20px;
+}
+
+
+#button_recherche_profils {
+    display:block;
+    height: 125px;
+    width: 135px;
+    border-radius: 50%;
+    border: 1px solid purple;
+    background-color: grey;
+    position: absolute;
+    left: 150px;
+    top: 175px;
+}
+
+#button_voir_messages {
+    display:block;
+    height: 125px;
+    width: 135px;
+    border-radius: 50%;
+    border: 1px solid purple;
+    background-color: grey;
+    position: absolute;
+    left: 150px;
+    top: 675px;
+}
+
+
+
+
+
+
