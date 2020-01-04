@@ -1,6 +1,7 @@
 import { OnDestroy, OnInit, OnChanges, EventEmitter, ElementRef, SimpleChanges } from '@angular/core';
-import { Colors } from './colors.service';
+import { Colors } from './colors.interface';
 export declare class BaseChartDirective implements OnDestroy, OnChanges, OnInit, Colors {
+    element: ElementRef;
     static defaultColors: Array<number[]>;
     data: number[] | any[];
     datasets: any[];
@@ -15,7 +16,6 @@ export declare class BaseChartDirective implements OnDestroy, OnChanges, OnInit,
     chart: any;
     cvs: any;
     initFlag: boolean;
-    element: ElementRef;
     isBrowser: any;
     constructor(element: ElementRef, platformId: string);
     ngOnInit(): any;

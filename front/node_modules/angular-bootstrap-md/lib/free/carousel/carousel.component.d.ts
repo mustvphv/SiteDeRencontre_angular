@@ -10,6 +10,7 @@ export declare enum Direction {
  * Base element to create carousel
  */
 export declare class CarouselComponent implements OnDestroy, AfterViewInit {
+    protected el: ElementRef;
     private cdRef;
     private renderer;
     SWIPE_ACTION: {
@@ -21,7 +22,6 @@ export declare class CarouselComponent implements OnDestroy, AfterViewInit {
     protected currentInterval: any;
     protected isPlaying: boolean;
     protected destroyed: boolean;
-    protected el: ElementRef | any;
     protected animationEnd: boolean;
     protected _currentActiveSlide: number;
     protected carouselIndicators: any;

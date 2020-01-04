@@ -6,5 +6,5 @@ export declare class EqualValidatorDirective implements Validator {
     private readonly isReverse;
     validate(c: AbstractControl): {
         [key: string]: any;
-    };
+    } | null;
 }

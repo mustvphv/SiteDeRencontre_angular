@@ -6,6 +6,7 @@ export declare const RADIO_CONTROL_VALUE_ACCESSOR: any;
  * A value of a selected button is bound to a variable specified via ngModel.
  */
 export declare class ButtonRadioDirective implements ControlValueAccessor, OnInit {
+    protected el: ElementRef;
     private renderer;
     onChange: any;
     onTouched: any;
@@ -16,7 +17,6 @@ export declare class ButtonRadioDirective implements ControlValueAccessor, OnIni
     uncheckable: boolean;
     /** Current value of radio component or group */
     value: any;
-    protected el: ElementRef;
     readonly isActive: boolean;
     onClick(event?: any): void;
     constructor(el: ElementRef, renderer: Renderer2);

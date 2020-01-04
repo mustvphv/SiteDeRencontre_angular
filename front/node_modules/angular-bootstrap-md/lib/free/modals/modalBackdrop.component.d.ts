@@ -5,11 +5,11 @@ export declare class ModalBackdropOptions {
 }
 /** This component will be added as background layout for modals if enabled */
 export declare class ModalBackdropComponent implements OnInit {
+    element: ElementRef;
+    renderer: Renderer2;
     classNameBackDrop: boolean;
     isAnimated: boolean;
     isShown: boolean;
-    element: ElementRef;
-    renderer: Renderer2;
     protected _isAnimated: boolean;
     protected _isShown: boolean;
     constructor(element: ElementRef, renderer: Renderer2);
