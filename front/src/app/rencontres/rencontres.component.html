@@ -1,0 +1,40 @@
+<app-top-bar-rencontres></app-top-bar-rencontres>
+
+<br>
+
+<button id="button_redirection_profil" (click)="redirectionProfil()">
+        Revenir sur votre profil
+    </button>
+
+<br>
+<br>
+<br>
+
+
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" id="style_slide_ecritures" *ngFor="let slide of slides" (click)="discussion(slide.nom)"> 
+          Pseudo: {{slide.nom}}
+          <br>
+          Genre: {{slide.genre}}
+          <br>
+          Email: {{slide.email}}
+      <img src="{{slide.photo}}" >
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</swiper>
+
+<br>
+<br>
+<br>
+
+<h1> Pour discuter, cliquez sur les différents profils</h1>
+
+
+<app-foot-bar></app-foot-bar>
+

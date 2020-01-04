@@ -1,0 +1,28 @@
+swiper {
+    height: 600px;
+    width: 800px;
+    margin: auto;
+}
+
+
+#style_slide_ecritures {
+    color: pink;
+    font-weight: bold;
+}
+
+
+
+
+
+#button_redirection_profil {
+    display:block;
+    height: 125px;
+    width: 135px;
+    border-radius: 50%;
+    border: 1px solid purple;
+    background-color: grey;
+    position: absolute;
+    left: 150px;
+    top: 175px;
+}
+
