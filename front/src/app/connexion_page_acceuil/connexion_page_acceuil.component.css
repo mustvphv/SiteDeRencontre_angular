@@ -1,0 +1,40 @@
+#mat-form-field_validateurs_style{
+    margin:100px;
+    width:230px;
+    margin-bottom: -1.25em;
+}
+
+#messageErreur_style{
+    color: red;
+}
+
+#messageErreurPersonnalise{
+    margin:100px;
+    width:230px;
+    /*margin-bottom: -1.25em;*/
+    color: red;
+    font-size: small;
+    position: absolute;
+    margin-top: -0.2em;
+    /*top: 0px; left: 0px;*/
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    
+    color: green !important;
+}
+  
+::ng-deep.mat-form-field-underline {
+    
+    background-color: brown !important;
+} 
+  
+::ng-deep.mat-form-field-ripple {
+   
+    background-color: green;
+}
+  
+
+::ng-deep.mat-select-panel {
+    background-color: rgb(153, 232, 238);
+}
