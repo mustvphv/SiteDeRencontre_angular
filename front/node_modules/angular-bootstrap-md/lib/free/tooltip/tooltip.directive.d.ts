@@ -49,8 +49,8 @@ export declare class TooltipDirective implements OnInit, OnDestroy, OnChanges {
     customHeight: string;
     fadeDuration: number;
     protected _delayTimeoutId: any;
-    isBrowser: any;
     private _tooltip;
+    isBrowser: any;
     constructor(_renderer: Renderer2, _elementRef: ElementRef, _positionService: PositioningService, _viewContainerRef: ViewContainerRef, cis: ComponentLoaderFactory, config: TooltipConfig, platformId: string);
     ngOnInit(): void;
     ngOnChanges(changes: SimpleChanges): void;

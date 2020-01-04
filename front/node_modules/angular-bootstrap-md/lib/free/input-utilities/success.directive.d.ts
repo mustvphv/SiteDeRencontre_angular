@@ -6,8 +6,8 @@ export declare class MdbSuccessDirective implements OnInit, OnDestroy {
     successMsg: boolean;
     messageId: string;
     textareaListenFunction: Function;
+    private utils;
     constructor(el: ElementRef, renderer: Renderer2);
-    private _getClosestEl;
     private _calculateMarginTop;
     ngOnInit(): void;
     ngOnDestroy(): void;

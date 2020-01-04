@@ -1,11 +1,18 @@
 import { EventEmitter, ElementRef, Renderer2, OnInit } from '@angular/core';
+export interface SortedData {
+    data: any[];
+    sortOrder: string;
+    sortBy: string;
+}
 export declare class MdbTableSortDirective implements OnInit {
     private el;
     private renderer;
-    sorted: boolean;
+    sortedInto: boolean;
+    order: string;
     dataSource: Array<any>;
     sortBy: string;
     sortEnd: EventEmitter<any[]>;
+    sorted: EventEmitter<SortedData>;
     constructor(el: ElementRef, renderer: Renderer2);
     onclick(): void;
     trimWhiteSigns(headElement: any): string;

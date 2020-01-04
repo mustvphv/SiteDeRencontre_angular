@@ -5,6 +5,8 @@ import { ModalOptions } from './modal.options';
 import { ComponentLoaderFactory } from '../utils/component-loader/component-loader.factory';
 /** Mark any code with directive to show it's content in modal */
 export declare class ModalDirective implements AfterViewInit, OnDestroy {
+    protected _element: ElementRef;
+    protected _renderer: Renderer2;
     /** allows to set modal configuration via element property */
     config: ModalOptions | any;
     /** This event fires immediately when the `show` instance method is called. */
@@ -31,8 +33,6 @@ export declare class ModalDirective implements AfterViewInit, OnDestroy {
     protected scrollbarWidth: number;
     protected timerHideModal: any;
     protected timerRmBackDrop: any;
-    protected _element: ElementRef;
-    protected _renderer: Renderer2;
     protected backdrop: ComponentRef<ModalBackdropComponent>;
     private _backdrop;
     _dialog: any;

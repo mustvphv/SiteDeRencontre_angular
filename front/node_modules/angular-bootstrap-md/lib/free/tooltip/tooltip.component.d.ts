@@ -1,11 +1,11 @@
 import { AfterViewInit, ElementRef } from '@angular/core';
 import { TooltipConfig } from './tooltip.service';
 export declare class TooltipContainerComponent implements AfterViewInit {
+    elem: ElementRef;
     classMap: any;
     placement: string;
     popupClass: string;
     animation: boolean;
-    el: ElementRef;
     containerClass: string;
     tooltipInner: ElementRef;
     tooltipArrow: ElementRef;
