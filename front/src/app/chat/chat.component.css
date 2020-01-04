@@ -1,0 +1,28 @@
+#textarea_source {
+    color: white;
+    background-color: grey;
+    margin-left: 800px;
+    margin-top:50px;
+    border:5px solid blueviolet;
+    box-shadow: 0 0 1px rgb(43, 226, 211);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    resize: none;
+        /*position: absolute;*/
+
+}
+
+
+#textarea_dest {
+    color: white;
+    background-color: blueviolet;
+    margin-left: 200px;
+    margin-top:50px;
+    border:5px solid grey;
+    box-shadow: 0 0 10px rgb(43, 226, 211);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    resize: none;
+}

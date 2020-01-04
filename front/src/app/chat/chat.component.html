@@ -1,0 +1,69 @@
+<app-top-bar-profil-utilisateur></app-top-bar-profil-utilisateur>
+
+<header no-border>
+    <mat-toolbar style='color: blueviolet' >
+      <h2>Messagerie: Discussion avec {{pseudo2}} </h2>
+    </mat-toolbar>
+  </header>
+  
+  <content>
+  
+    <!--<card>-->
+      <!--<p>
+          There are currently <strong>{{users}}</strong> users online. Start chatting!
+      </p>-->
+    <!--</card>-->
+  
+      <ul lines="none">
+  
+          <div *ngFor="let message of messages">
+
+           <textarea id='textarea_source' rows="6" cols="20" *ngIf="message.source === pseudo" >
+                {{message.texte}}
+            </textarea>
+            <textarea id='textarea_dest' rows="6" cols="20" *ngIf="message.source !== pseudo" disabled>
+                {{message.texte}}
+            </textarea>
+            {{message.date}}
+
+
+          </div>
+      
+      </ul>
+  
+  </content>
+  
+  <!--<footer>-->
+  
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+      <mat-toolbar>
+            <mat-form-field id='mat-form-field_validateurs_style' [formGroup]="formulaireMessage">
+
+
+            <input matInput formControlName="message_ecriture" spellcheck="true" autoComplete="true" autocorrect="true" rows="1" class="chat-input" placeholder="entrez un message..." (keyup.enter)="envoiMessage()">
+  
+          <!--<ion-buttons slot="primary">-->
+              <button (click)="envoiMessage()" slot="end" class="send-chat-button">
+                <mat-icon slot="icon-only" name="send"></mat-icon>
+              </button>
+          <!--</ion-buttons>-->
+        </mat-form-field>
+  
+  
+      </mat-toolbar>
+
+  
+  <!--</footer>-->
+
+
+
+<!--  <app-foot-bar></app-foot-bar>-->
