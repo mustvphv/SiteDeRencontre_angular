@@ -1,0 +1,26 @@
+<app-top-bar-profil-utilisateur></app-top-bar-profil-utilisateur>
+
+<br>
+<br>
+<br>
+<br>
+
+<h1>
+    Retrouvez vos discussions déjà créées
+</h1>
+
+
+    <div *ngFor="let discussion of discussions">
+        <button id='button_discussions' (click)='entrerDiscussion(discussion)'>
+        Discussion avec {{discussion}}
+        </button>
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<app-foot-bar></app-foot-bar>
