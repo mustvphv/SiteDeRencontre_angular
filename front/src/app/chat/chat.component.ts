@@ -4,6 +4,8 @@ import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
 import { ChatService } from '../chat.service';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Socket } from 'ngx-socket-io';
+import { timeout, catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 
 @Component({
@@ -202,6 +204,13 @@ export class ChatComponent implements OnInit {
         message10Texte: 'null',
         message10Date: 'null'
       })
+      .pipe(
+        timeout(2000),
+        catchError(e => {
+          // console.log('timeout');
+          return of(null);
+        })
+      )
       .subscribe(
         (res) => {
           console.log('Enregistrement d\'un nouveau message');

@@ -47,10 +47,11 @@ export class ChatService {
         // return this.chatRepository.save(discussion);
 
         // return this.chatRepository.update(discussion.id, discussion);
-        console.log('DÉBUT Message\npseudoSource' + pseudoSource);
+
+        /*console.log('DÉBUT Message\npseudoSource' + pseudoSource);
         console.log('pseudoDest=' + pseudoDest);
         console.log('nouveauMessageTexte=' + nouveauMessageTexte);
-        console.log('nouveauMessageDate=' + nouveauMessageDate);
+        console.log('nouveauMessageDate=' + nouveauMessageDate);*/
 
 
         let discussion = await this.getDiscussionBySourceEtDest(pseudoSource, pseudoDest); // await this.chatRepository.findOne(1);
