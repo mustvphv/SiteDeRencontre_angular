@@ -258,30 +258,29 @@ export class ChatComponent implements OnInit {
 
 
   envoiMessage() {
-
     let valeurAuthToken = JSON.parse(JSON.stringify(localStorage.getItem('auth_token')));
 
-    this.pseudo = this.route.snapshot.paramMap.get('utilisateur1');
-/*
+    // this.connecteOuDeconnecte();
+
     this.httpClient.get(`http://localhost:3000/auth/informationsUtilisateur/${this.pseudo}`, { headers: new HttpHeaders({
       'Authorization': `Bearer ${valeurAuthToken}`,
       'Content-Type': 'application/json',
     }) } ).subscribe((data: any) => {
       this.infos = JSON.parse(JSON.stringify(data.pseudo));
-      this.connecte = 1;*/
+      this.connecte = 1;
 
-    this.socket.emit('ajoutMessage', { texte: this.formulaireMessage.get('message_ecriture').value, source: this.pseudo, destinataire: this.pseudo2 });
-    this.formulaireMessage.get('message_ecriture').reset();
-    this.message.texte = '';
-    this.message.source = '';
-    this.message.date = '';
+      this.socket.emit('ajoutMessage', { texte: this.formulaireMessage.get('message_ecriture').value,
+      source: this.pseudo, destinataire: this.pseudo2 });
+      this.formulaireMessage.get('message_ecriture').reset();
+      this.message.texte = '';
+      this.message.source = '';
+      this.message.date = '';
 
-/*
     }, err => {
       this.connecte = 0;
       localStorage.removeItem('auth_token');
       this.router.navigate(['/connexion_page_acceuil']);
-    } );*/
+    } );
 
 
 
@@ -293,7 +292,7 @@ export class ChatComponent implements OnInit {
 
   }
 
-  ionViewWillLeave() {
+  test() {
     this.socket.disconnect();
   }
 
