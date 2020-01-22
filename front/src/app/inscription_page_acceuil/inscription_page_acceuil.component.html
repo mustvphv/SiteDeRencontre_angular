@@ -16,7 +16,7 @@
 
 <br>
 
-<form id='mat-form-field_validateurs_style' [formGroup]="formulaireValidation" (click)="ClickSurPseudoForm()">
+<form class='mat-form-field_validateurs_style' [formGroup]="formulaireValidation" (click)="ClickSurPseudoForm()">
 <mat-form-field>
   <input matInput placeholder="Choisissez un pseudo" formControlName="pseudo" (ngModelChange)="choixPseudoFait($event)"> <!-- (ngModelChange)="RepererChangementPseudo($event)" -->
 
@@ -49,21 +49,21 @@
   && formulaireValidation.get('pseudo').hasError('minlength') === false
   && formulaireValidation.get('pseudo').hasError('maxlength') === false
   && formulaireValidation.get('pseudo').hasError('pattern') === false
-  && formulaireValidation.get('pseudo').hasError('pseudoExist') === false" id='test_couleur'>
+  && formulaireValidation.get('pseudo').hasError('pseudoExist') === false" class='test_couleur'>
       Pseudo valide
   </mat-hint>
 
 </mat-form-field>
 </form>
 
-<div id='messageErreurPersonnalise' *ngIf="pseudoValide===false">
+<div class='messageErreurPersonnalise' *ngIf="pseudoValide===false">
   <mat-error> Vous n'avez pas rempli ce champ. </mat-error>
 </div>
 
 
 <br>
 
-<form id='mat-form-field_validateurs_style' [formGroup]="formulaireValidation" (click)="ClickSurEmailForm()">
+<form class='mat-form-field_validateurs_style' [formGroup]="formulaireValidation" (click)="ClickSurEmailForm()">
   <mat-form-field>
     <input matInput placeholder="Choisissez un email" formControlName="email"  required (ngModelChange)="RepererChangementEmail($event)" (ngModelChange)="choixEmailFait($event)">
   
@@ -80,7 +80,7 @@
     </mat-error>
   
   
-    <!--<mat-error *ngIf="emailExisteDeja === 1 && emailValide===true" id='erreur_couleur'>
+    <!--<mat-error *ngIf="emailExisteDeja === 1 && emailValide===true" class='erreur_couleur'>
         Cet email a déjà été utilisé.
     </mat-error>-->
 
@@ -89,14 +89,14 @@
     </mat-error>
   
     <mat-hint *ngIf="formulaireValidation.get('email').hasError('required') === false
-    && formulaireValidation.get('email').hasError('pattern') === false" id='test_couleur'>
+    && formulaireValidation.get('email').hasError('pattern') === false" class='test_couleur'>
         Email valide
     </mat-hint>
   
   </mat-form-field>
   </form>
 
-  <div id='messageErreurPersonnalise' *ngIf="emailValide===false">
+  <div class='messageErreurPersonnalise' *ngIf="emailValide===false">
     <mat-error> Vous n'avez pas rempli ce champ. </mat-error>
   </div>
   
@@ -109,7 +109,7 @@
 
 
 
-<form id='mat-form-field_validateurs_style' [formGroup]="formulaireValidation">
+<form class='mat-form-field_validateurs_style' [formGroup]="formulaireValidation">
   <fieldset formGroupName="motDePasseGroupe">
 	<mat-form-field (click)="ClickSurMotDePasseForm()">
     <input matInput placeholder="Mot de passe" (keyup)="choixMotDePasse(matcher)" [type]="hide ? 'password' 
@@ -151,19 +151,19 @@
       Le mot de passe doit avoir au moins 2 lettres.
     </mat-error>
     <!--<mat-hint *ngIf="formulaireValidation.get('motDePasseGroupe').get('confirmationMotDePasse').hasError('pasAssezDeLettres') === false && formulaireValidation.get('motDePasseGroupe').get('confirmationMotDePasse').hasError('pasEquivalent') === false 
-    && formulaireValidation.get('motDePasseGroupe').get('confirmationMotDePasse').hasError('pasAssezDeCaracteres') === false && formulaireValidation.get('motDePasseGroupe').get('confirmationMotDePasse').hasError('tropDeCaracteres') === false" id='test_couleur'>
+    && formulaireValidation.get('motDePasseGroupe').get('confirmationMotDePasse').hasError('pasAssezDeCaracteres') === false && formulaireValidation.get('motDePasseGroupe').get('confirmationMotDePasse').hasError('tropDeCaracteres') === false" class='test_couleur'>
         Mot de passe valide.
         PAS equivalent = {{formulaireValidation.get('motDePasseGroupe').get('confirmationMotDePasse').hasError('pasEquivalent')}}
     </mat-hint>-->
     
-      <mat-hint *ngIf="formulaireValidation.get('motDePasseGroupe').get('confirmationMotDePasse').hasError('pasAssezDeCaracteres') === false" id='test_couleur'>
+      <mat-hint *ngIf="formulaireValidation.get('motDePasseGroupe').get('confirmationMotDePasse').hasError('pasAssezDeCaracteres') === false" class='test_couleur'>
         Mot de passe valide.
     </mat-hint>
   </mat-form-field>
   </fieldset>
 </form>
 
-<div id='messageErreurPersonnalise' *ngIf="motDePasseValide===false">
+<div class='messageErreurPersonnalise' *ngIf="motDePasseValide===false">
   <mat-error> Vous n'avez pas rempli ce champ. </mat-error>
 </div>
 
@@ -176,20 +176,20 @@
 
 
 
-<mat-form-field id='mat-form-field_validateurs_style' (click)="ClickSurPhysiqueGenreForm()" [formGroup]="formulaireValidation">
+<mat-form-field class='mat-form-field_validateurs_style' (click)="ClickSurPhysiqueGenreForm()" [formGroup]="formulaireValidation">
   <mat-label>Quel est votre genre?</mat-label>
-  <mat-select id='test_couleur' [formControl]="formulaireValidation.get('physiqueGenreControl')" required>
-    <mat-option id='test_couleur' >_</mat-option>
+  <mat-select class='test_couleur' [formControl]="formulaireValidation.get('physiqueGenreControl')" required>
+    <mat-option class='test_couleur' >_</mat-option>
     <mat-option *ngFor="let physiqueGenre of physiqueGenres" [value]="physiqueGenre">
       {{physiqueGenre.nom}}
     </mat-option>
   </mat-select>
   <mat-error *ngIf="formulaireValidation.get('physiqueGenreControl').hasError('required') && physiqueGenreValide===true"> Vous n'avez pas rempli cette case.</mat-error>
-  <mat-hint id='test_couleur'>{{formulaireValidation.get('physiqueGenreControl').value?.sortie}}</mat-hint>
+  <mat-hint class='test_couleur'>{{formulaireValidation.get('physiqueGenreControl').value?.sortie}}</mat-hint>
 </mat-form-field>
 
 
-<div id='messageErreurPersonnalise' *ngIf="physiqueGenreValide===false">
+<div class='messageErreurPersonnalise' *ngIf="physiqueGenreValide===false">
     <mat-error> Vous n'avez pas rempli cette case. </mat-error>
 </div>
 
@@ -197,19 +197,19 @@
 
 <br>
 
-<mat-form-field id='mat-form-field_validateurs_style' (click)="ClickSurPhysiqueTailleForm()" [formGroup]="formulaireValidation">
+<mat-form-field class='mat-form-field_validateurs_style' (click)="ClickSurPhysiqueTailleForm()" [formGroup]="formulaireValidation">
   <mat-label>Quel est votre taille?</mat-label>
-  <mat-select id='test_couleur' [formControl]="formulaireValidation.get('physiqueTailleControl')" required>
-    <mat-option id='test_couleur'>_</mat-option>
+  <mat-select class='test_couleur' [formControl]="formulaireValidation.get('physiqueTailleControl')" required>
+    <mat-option class='test_couleur'>_</mat-option>
     <mat-option *ngFor="let physiqueTaille of physiqueTailles" [value]="physiqueTaille">
       {{physiqueTaille.nom}}
     </mat-option>
   </mat-select>
   <mat-error *ngIf="formulaireValidation.get('physiqueTailleControl').hasError('required') && physiqueTailleValide===true">Vous n'avez pas rempli cette case.</mat-error>
-  <mat-hint id='test_couleur'>{{formulaireValidation.get('physiqueTailleControl').value?.sortie}}</mat-hint>
+  <mat-hint class='test_couleur'>{{formulaireValidation.get('physiqueTailleControl').value?.sortie}}</mat-hint>
 </mat-form-field>
 
-<p id='messageErreurPersonnalise'  *ngIf="physiqueTailleValide===false">
+<p class='messageErreurPersonnalise'  *ngIf="physiqueTailleValide===false">
     Vous n'avez pas rempli cette case.
   </p>
 
@@ -217,19 +217,19 @@
 
   <br>
 
-  <mat-form-field id='mat-form-field_validateurs_style' (click)="ClickSurPhysiqueCouleurPeauForm()" [formGroup]="formulaireValidation">
+  <mat-form-field class='mat-form-field_validateurs_style' (click)="ClickSurPhysiqueCouleurPeauForm()" [formGroup]="formulaireValidation">
     <mat-label>Quel est votre couleur de peau?</mat-label>
-    <mat-select id='test_couleur' [formControl]="formulaireValidation.get('physiqueCouleurPeauControl')" required>
-      <mat-option id='test_couleur'>_</mat-option>
+    <mat-select class='test_couleur' [formControl]="formulaireValidation.get('physiqueCouleurPeauControl')" required>
+      <mat-option class='test_couleur'>_</mat-option>
       <mat-option *ngFor="let physiqueCouleurPeau of physiqueCouleurPeaux" [value]="physiqueCouleurPeau">
         {{physiqueCouleurPeau.nom}}
       </mat-option>
     </mat-select>
     <mat-error *ngIf="formulaireValidation.get('physiqueCouleurPeauControl').hasError('required') && physiqueCouleurPeauValide===true">Vous n'avez pas rempli cette case.</mat-error>
-    <mat-hint id='test_couleur'>{{formulaireValidation.get('physiqueCouleurPeauControl').value?.sortie}}</mat-hint>
+    <mat-hint class='test_couleur'>{{formulaireValidation.get('physiqueCouleurPeauControl').value?.sortie}}</mat-hint>
   </mat-form-field>
 
-  <p id='messageErreurPersonnalise'  *ngIf="physiqueCouleurPeauValide===false">
+  <p class='messageErreurPersonnalise'  *ngIf="physiqueCouleurPeauValide===false">
       Vous n'avez pas rempli cette case.
     </p>
   
@@ -237,38 +237,38 @@
 
   <br>
 
-  <mat-form-field id='mat-form-field_validateurs_style' (click)="ClickSurPhysiqueCouleurCheveuForm()" [formGroup]="formulaireValidation">
+  <mat-form-field class='mat-form-field_validateurs_style' (click)="ClickSurPhysiqueCouleurCheveuForm()" [formGroup]="formulaireValidation">
     <mat-label>Quel est votre couleur de cheveux?</mat-label>
-    <mat-select id='test_couleur' [formControl]="formulaireValidation.get('physiqueCouleurCheveuControl')" required>
-      <mat-option id='test_couleur'>_</mat-option>
+    <mat-select class='test_couleur' [formControl]="formulaireValidation.get('physiqueCouleurCheveuControl')" required>
+      <mat-option class='test_couleur'>_</mat-option>
       <mat-option *ngFor="let physiqueCouleurCheveu of physiqueCouleurCheveux" [value]="physiqueCouleurCheveu">
         {{physiqueCouleurCheveu.nom}}
       </mat-option>
     </mat-select>
     <mat-error *ngIf="formulaireValidation.get('physiqueCouleurCheveuControl').hasError('required') && physiqueCouleurCheveuValide===true">Vous n'avez pas rempli cette case.</mat-error>
-    <mat-hint id='test_couleur'>{{formulaireValidation.get('physiqueCouleurCheveuControl').value?.sortie}}</mat-hint>
+    <mat-hint class='test_couleur'>{{formulaireValidation.get('physiqueCouleurCheveuControl').value?.sortie}}</mat-hint>
   </mat-form-field>
 
-  <p id='messageErreurPersonnalise'  *ngIf="physiqueCouleurCheveuValide===false">
+  <p class='messageErreurPersonnalise'  *ngIf="physiqueCouleurCheveuValide===false">
       Vous n'avez pas rempli cette case.
     </p>
 
 
   <br>
 
-  <mat-form-field id='mat-form-field_validateurs_style' (click)="ClickSurPhysiqueCouleurYeuxForm()" [formGroup]="formulaireValidation">
+  <mat-form-field class='mat-form-field_validateurs_style' (click)="ClickSurPhysiqueCouleurYeuxForm()" [formGroup]="formulaireValidation">
     <mat-label>Quel est la couleur de vos yeux?</mat-label>
-    <mat-select id='test_couleur' [formControl]="formulaireValidation.get('physiqueCouleurYeuxControl')" required>
-      <mat-option id='test_couleur'>_</mat-option>
+    <mat-select class='test_couleur' [formControl]="formulaireValidation.get('physiqueCouleurYeuxControl')" required>
+      <mat-option class='test_couleur'>_</mat-option>
       <mat-option *ngFor="let physiqueCouleurYeux of physiqueCouleurYeuxs" [value]="physiqueCouleurYeux">
         {{physiqueCouleurYeux.nom}}
       </mat-option>
     </mat-select>
     <mat-error *ngIf="formulaireValidation.get('physiqueCouleurYeuxControl').hasError('required') && physiqueCouleurYeuxValide===true">Vous n'avez pas rempli cette case.</mat-error>
-    <mat-hint id='test_couleur'>{{formulaireValidation.get('physiqueCouleurYeuxControl').value?.sortie}}</mat-hint>
+    <mat-hint class='test_couleur'>{{formulaireValidation.get('physiqueCouleurYeuxControl').value?.sortie}}</mat-hint>
   </mat-form-field>
 
-  <p id='messageErreurPersonnalise'  *ngIf="physiqueCouleurYeuxValide===false">
+  <p class='messageErreurPersonnalise'  *ngIf="physiqueCouleurYeuxValide===false">
       Vous n'avez pas rempli cette case.
     </p>
 
@@ -279,19 +279,19 @@
 
 
 
-<mat-form-field id='mat-form-field_validateurs_style' (click)="ClickSurPreferenceGenreForm()" [formGroup]="formulaireValidation">
+<mat-form-field class='mat-form-field_validateurs_style' (click)="ClickSurPreferenceGenreForm()" [formGroup]="formulaireValidation">
   <mat-label>Quel genre recherchez-vous?</mat-label>
-  <mat-select id='test_couleur' [formControl]="formulaireValidation.get('preferenceGenreControl')" required>
-    <mat-option id='test_couleur'>_</mat-option>
+  <mat-select class='test_couleur' [formControl]="formulaireValidation.get('preferenceGenreControl')" required>
+    <mat-option class='test_couleur'>_</mat-option>
     <mat-option *ngFor="let preferenceGenre of preferenceGenres" [value]="preferenceGenre">
       {{preferenceGenre.nom}}
     </mat-option>
   </mat-select>
   <mat-error *ngIf="formulaireValidation.get('preferenceGenreControl').hasError('required') && preferenceGenreValide===true">Vous n'avez pas rempli cette case.</mat-error>
-  <mat-hint id='test_couleur'>{{formulaireValidation.get('preferenceGenreControl').value?.sortie}}</mat-hint>
+  <mat-hint class='test_couleur'>{{formulaireValidation.get('preferenceGenreControl').value?.sortie}}</mat-hint>
 </mat-form-field>
 
-<p id='messageErreurPersonnalise'  *ngIf="preferenceGenreValide===false">
+<p class='messageErreurPersonnalise'  *ngIf="preferenceGenreValide===false">
     Vous n'avez pas rempli cette case.
   </p>
 
@@ -299,38 +299,38 @@
 
 <br>
 
-<mat-form-field id='mat-form-field_validateurs_style' (click)="ClickSurPreferenceTailleForm()" [formGroup]="formulaireValidation">
+<mat-form-field class='mat-form-field_validateurs_style' (click)="ClickSurPreferenceTailleForm()" [formGroup]="formulaireValidation">
   <mat-label>Quels sont vos critères au niveau de la taille?</mat-label>
-  <mat-select id='test_couleur' [formControl]="formulaireValidation.get('preferenceTailleControl')" required>
-    <mat-option id='test_couleur'>_</mat-option>
+  <mat-select class='test_couleur' [formControl]="formulaireValidation.get('preferenceTailleControl')" required>
+    <mat-option class='test_couleur'>_</mat-option>
     <mat-option *ngFor="let preferenceTaille of preferenceTailles" [value]="preferenceTaille">
       {{preferenceTaille.nom}}
     </mat-option>
   </mat-select>
   <mat-error *ngIf="formulaireValidation.get('preferenceTailleControl').hasError('required') && preferenceTailleValide===true">Vous n'avez pas rempli cette case.</mat-error>
-  <mat-hint id='test_couleur'>{{formulaireValidation.get('preferenceTailleControl').value?.sortie}}</mat-hint>
+  <mat-hint class='test_couleur'>{{formulaireValidation.get('preferenceTailleControl').value?.sortie}}</mat-hint>
 </mat-form-field>
 
-<p id='messageErreurPersonnalise'  *ngIf="preferenceTailleValide===false">
+<p class='messageErreurPersonnalise'  *ngIf="preferenceTailleValide===false">
     Vous n'avez pas rempli cette case.
   </p>
 
 
   <br>
 
-  <mat-form-field id='mat-form-field_validateurs_style' (click)="ClickSurPreferenceCouleurPeauForm()" [formGroup]="formulaireValidation">
+  <mat-form-field class='mat-form-field_validateurs_style' (click)="ClickSurPreferenceCouleurPeauForm()" [formGroup]="formulaireValidation">
     <mat-label>Quels sont vos préférences de couleur de peaux?</mat-label>
-    <mat-select id='test_couleur' [formControl]="formulaireValidation.get('preferenceCouleurPeauControl')" required>
-      <mat-option id='test_couleur'>_</mat-option>
+    <mat-select class='test_couleur' [formControl]="formulaireValidation.get('preferenceCouleurPeauControl')" required>
+      <mat-option class='test_couleur'>_</mat-option>
       <mat-option *ngFor="let preferenceCouleurPeau of preferenceCouleurPeaux" [value]="preferenceCouleurPeau">
         {{preferenceCouleurPeau.nom}}
       </mat-option>
     </mat-select>
     <mat-error *ngIf="formulaireValidation.get('preferenceCouleurPeauControl').hasError('required') && preferenceCouleurPeauValide===true">Vous n'avez pas rempli cette case.</mat-error>
-    <mat-hint id='test_couleur'>{{formulaireValidation.get('preferenceCouleurPeauControl').value?.sortie}}</mat-hint>
+    <mat-hint class='test_couleur'>{{formulaireValidation.get('preferenceCouleurPeauControl').value?.sortie}}</mat-hint>
   </mat-form-field>
 
-  <p id='messageErreurPersonnalise'  *ngIf="preferenceCouleurPeauValide===false">
+  <p class='messageErreurPersonnalise'  *ngIf="preferenceCouleurPeauValide===false">
       Vous n'avez pas rempli cette case.
     </p>
   
@@ -338,19 +338,19 @@
 
   <br>
 
-  <mat-form-field id='mat-form-field_validateurs_style' (click)="ClickSurPreferenceCouleurCheveuForm()" [formGroup]="formulaireValidation">
+  <mat-form-field class='mat-form-field_validateurs_style' (click)="ClickSurPreferenceCouleurCheveuForm()" [formGroup]="formulaireValidation">
     <mat-label>Quels sont vos préférences de couleur de cheveux?</mat-label>
-    <mat-select id='test_couleur' [formControl]="formulaireValidation.get('preferenceCouleurCheveuControl')" required>
-      <mat-option id='test_couleur'>_</mat-option>
+    <mat-select class='test_couleur' [formControl]="formulaireValidation.get('preferenceCouleurCheveuControl')" required>
+      <mat-option class='test_couleur'>_</mat-option>
       <mat-option *ngFor="let preferenceCouleurCheveu of preferenceCouleurCheveux" [value]="preferenceCouleurCheveu">
         {{preferenceCouleurCheveu.nom}}
       </mat-option>
     </mat-select>
     <mat-error *ngIf="formulaireValidation.get('preferenceCouleurCheveuControl').hasError('required') && preferenceCouleurCheveuValide===true">Vous n'avez pas rempli cette case.</mat-error>
-    <mat-hint id='test_couleur'>{{formulaireValidation.get('preferenceCouleurCheveuControl').value?.sortie}}</mat-hint>
+    <mat-hint class='test_couleur'>{{formulaireValidation.get('preferenceCouleurCheveuControl').value?.sortie}}</mat-hint>
   </mat-form-field>
 
-  <p id='messageErreurPersonnalise'  *ngIf="preferenceCouleurCheveuValide===false">
+  <p class='messageErreurPersonnalise'  *ngIf="preferenceCouleurCheveuValide===false">
       Vous n'avez pas rempli cette case.
     </p>
   
@@ -358,19 +358,19 @@
 
   <br>
 
-  <mat-form-field id='mat-form-field_validateurs_style' (click)="ClickSurPreferenceCouleurYeuxForm()" [formGroup]="formulaireValidation">
+  <mat-form-field class='mat-form-field_validateurs_style' (click)="ClickSurPreferenceCouleurYeuxForm()" [formGroup]="formulaireValidation">
     <mat-label>Quels sont vos préférences de couleur de yeux?</mat-label>
-    <mat-select id='test_couleur' [formControl]="formulaireValidation.get('preferenceCouleurYeuxControl')" required>
-      <mat-option id='test_couleur'>_</mat-option>
+    <mat-select class='test_couleur' [formControl]="formulaireValidation.get('preferenceCouleurYeuxControl')" required>
+      <mat-option class='test_couleur'>_</mat-option>
       <mat-option *ngFor="let preferenceCouleurYeux of preferenceCouleurYeuxs" [value]="preferenceCouleurYeux">
         {{preferenceCouleurYeux.nom}}
       </mat-option>
     </mat-select>
     <mat-error *ngIf="formulaireValidation.get('preferenceCouleurYeuxControl').hasError('required') && preferenceCouleurYeuxValide===true">Vous n'avez pas rempli cette case.</mat-error>
-    <mat-hint id='test_couleur'>{{formulaireValidation.get('preferenceCouleurYeuxControl').value?.sortie}}</mat-hint>
+    <mat-hint class='test_couleur'>{{formulaireValidation.get('preferenceCouleurYeuxControl').value?.sortie}}</mat-hint>
   </mat-form-field>
 
-  <p id='messageErreurPersonnalise'  *ngIf="preferenceCouleurYeuxValide===false">
+  <p class='messageErreurPersonnalise'  *ngIf="preferenceCouleurYeuxValide===false">
       Vous n'avez pas rempli cette case.
     </p>
   
@@ -379,9 +379,9 @@
 
 
 
-<h2 id='photoDeProfil_style'>Mettez une photo de profil</h2>
+<h2 class='photoDeProfil_style'>Mettez une photo de profil</h2>
 
-<div id='photoDeProfil_style'>
+<div class='photoDeProfil_style'>
 
   <!--
   <div *ngIf="messageErreurPasDePhoto">
@@ -400,53 +400,45 @@
   </div>
 -->
 
-<br>
-<br>
-<br>
+<br style = 'line-height:3;'>
 
   <form [formGroup]="formulaireValidation" (ngSubmit)="onSubmit()">
 
-    <input type="file" accept='image/*' id="photoDeProfil" (change)="onFileChange($event)" #fileInput/>
+    <input type="file" accept='image/*' class="photoDeProfil" (change)="onFileChange($event)" #fileInput/>
     <img [src]="imgURL" height="200" *ngIf="imgURL">
 
 
-<br>
-<br>
-<br>
-<br>
+<br style = 'line-height:4;'>
 
   </form>
 </div>
 
 
 <!--
-<h3 id="messageErreur_style">
+<h3 class="messageErreur_style">
   {{ messageErreur }}
 </h3>
 -->
-<br>
-<br>
-<br>
+
+<br style = 'line-height:3;'>
 
 <p>
-    <button id='mat-form-field_validateurs_style' (click)="creerNouvelUtilisateur()">Validez l'inscription</button>
+    <button class='mat-form-field_validateurs_style' (click)="creerNouvelUtilisateur()">Validez l'inscription</button>
 </p>
 
-<p id='messageErreurPersonnalise'  *ngIf="creationUtilisateur===0 && appuiButtonCreationUtilisateur===1">
+<p class='messageErreurPersonnalise'  *ngIf="creationUtilisateur===0 && appuiButtonCreationUtilisateur===1">
   Inscription impossible.
   Vous n'avez pas validé tous les champs (champs vides ou mal validés).
 </p>
 
-<p id='validationDeLInscription' *ngIf="creationUtilisateur===1 && erreurValidation===0">
+<p class='validationDeLInscription' *ngIf="creationUtilisateur===1 && erreurValidation===0">
     Votre inscription a bien été prise en compte.
     <br>
     Vous pouvez maintenant vous connecter à l'interface utilisateur.
 </p>
 
 
-<br>
-<br>
-<br>
+<br style = 'line-height:3;'>
 
 
 <app-foot-bar></app-foot-bar>
