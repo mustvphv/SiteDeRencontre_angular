@@ -18,10 +18,10 @@
   
           <div *ngFor="let message of messages">
 
-           <textarea id='textarea_source' rows="6" cols="20" *ngIf="message.source === pseudo" >
+           <textarea class='textarea_source' rows="6" cols="20" *ngIf="message.source === pseudo" >
                 {{message.texte}}
             </textarea>
-            <textarea id='textarea_dest' rows="6" cols="20" *ngIf="message.source !== pseudo" disabled>
+            <textarea class='textarea_dest' rows="6" cols="20" *ngIf="message.source !== pseudo" disabled>
                 {{message.texte}}
             </textarea>
             {{message.date}}
@@ -35,18 +35,10 @@
   
   <!--<footer>-->
   
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br style = 'line-height:10;'>
 
-      <mat-toolbar>
-            <mat-form-field id='mat-form-field_validateurs_style' [formGroup]="formulaireMessage">
+      <mat-toolbar class='message_toolbar_class'>
+            <mat-form-field class='mat-form-field_validateurs_style' [formGroup]="formulaireMessage">
 
 
             <input matInput formControlName="message_ecriture" spellcheck="true" autoComplete="true" autocorrect="true" rows="1" class="chat-input" placeholder="entrez un message..." (keyup.enter)="envoiMessage()">

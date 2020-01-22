@@ -1,4 +1,4 @@
-#textarea_source {
+.textarea_source {
     color: white;
     background-color: grey;
     margin-left: 800px;
@@ -14,7 +14,7 @@
 }
 
 
-#textarea_dest {
+.textarea_dest {
     color: white;
     background-color: blueviolet;
     margin-left: 200px;
