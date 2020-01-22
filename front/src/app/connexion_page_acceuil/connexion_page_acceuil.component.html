@@ -3,7 +3,7 @@
 
 <br>
 
-<form id='mat-form-field_validateurs_style' [formGroup]="formulaireConnexion">
+<form class='mat-form-field_validateurs_style' [formGroup]="formulaireConnexion">
   <mat-form-field>
     <input matInput placeholder="Entrez votre pseudo" formControlName="pseudo">
   
@@ -13,7 +13,7 @@
 
 <br>
 
-<form id='mat-form-field_validateurs_style' [formGroup]="formulaireConnexion">
+<form class='mat-form-field_validateurs_style' [formGroup]="formulaireConnexion">
   <mat-form-field>
     <input matInput placeholder="Entrez votre mot de passe" formControlName="motDePasse" [type]="hide ? 'password' : 'text'">
     <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 
@@ -21,23 +21,22 @@
   </mat-form-field>
 </form>
 
-<br>
-<br>
-<br>
+
+<br style = 'line-height:3;'>
+
 
 <p>
-  <button id='mat-form-field_validateurs_style' (click)="connexionUtilisateur()">Connexion</button>
+  <button class='mat-form-field_validateurs_style' (click)="connexionUtilisateur()">Connexion</button>
 </p>
 
-<p id='messageErreurPersonnalise'  *ngIf="erreurConnexion===1">
+<p class='messageErreurPersonnalise'  *ngIf="erreurConnexion===1">
     Connexion impossible.
     <br>
     Le pseudo ou le mot de passe donnés sont erronés.
   </p>
 
-<br>
-<br>
-<br>
+  <br style = 'line-height:3;'>
+
 
 <!--<p>
   <button (click)="displayInformationsJSON()">Afficher informations Requête</button>

@@ -1,14 +1,14 @@
-#mat-form-field_validateurs_style{
+.mat-form-field_validateurs_style{
     margin:100px;
     width:230px;
     margin-bottom: -1.25em;
 }
 
-#messageErreur_style{
+.messageErreur_style{
     color: red;
 }
 
-#messageErreurPersonnalise{
+.messageErreurPersonnalise{
     margin:100px;
     width:230px;
     /*margin-bottom: -1.25em;*/
