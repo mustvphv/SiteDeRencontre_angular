@@ -29,7 +29,7 @@
 }
 
 
-#button_recherche_profils {
+.button_recherche_profils {
     display:block;
     height: 125px;
     width: 135px;
@@ -41,7 +41,7 @@
     top: 175px;
 }
 
-#button_voir_messages {
+.button_voir_messages {
     display:block;
     height: 125px;
     width: 135px;
