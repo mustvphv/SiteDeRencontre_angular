@@ -5,7 +5,7 @@ swiper {
 }
 
 
-#style_slide_ecritures {
+.style_slide_ecritures {
     color: pink;
     font-weight: bold;
 }
@@ -14,7 +14,7 @@ swiper {
 
 
 
-#button_redirection_profil {
+.button_redirection_profil {
     display:block;
     height: 125px;
     width: 135px;

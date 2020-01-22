@@ -2,18 +2,17 @@
 
 <br>
 
-<button id="button_redirection_profil" (click)="redirectionProfil()">
+<button class="button_redirection_profil" (click)="redirectionProfil()">
         Revenir sur votre profil
     </button>
 
-<br>
-<br>
-<br>
+
+<br style = 'line-height:3;'>
 
 
 <swiper [config]="config">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" id="style_slide_ecritures" *ngFor="let slide of slides" (click)="discussion(slide.nom)"> 
+      <div class="swiper-slide style_slide_ecritures" *ngFor="let slide of slides" (click)="discussion(slide.nom)"> 
           Pseudo: {{slide.nom}}
           <br>
           Genre: {{slide.genre}}
@@ -29,9 +28,8 @@
     <div class="swiper-button-prev"></div>
 </swiper>
 
-<br>
-<br>
-<br>
+<br style = 'line-height:3;'>
+
 
 <h1> Pour discuter, cliquez sur les différents profils</h1>
 
