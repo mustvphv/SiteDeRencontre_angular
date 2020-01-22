@@ -3,6 +3,7 @@ import { ChatGateway } from './chat.gateway';
 import { ChatController } from './chat.controller';
 import { ChatService } from './chat.service';
 import { Chat } from './chat.entity';
+import { Message } from './message.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
@@ -10,6 +11,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     // providers: [ ChatGateway, ChatService ],
     imports: [
         TypeOrmModule.forFeature([Chat], 'discussionBDD'),
+        TypeOrmModule.forFeature([Message], 'discussionBDD'),
       ],
     providers: [ChatService, ChatGateway],
     controllers: [ChatController],
