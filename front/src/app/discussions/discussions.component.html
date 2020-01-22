@@ -1,9 +1,6 @@
 <app-top-bar-profil-utilisateur></app-top-bar-profil-utilisateur>
 
-<br>
-<br>
-<br>
-<br>
+<br style = 'line-height:4;'>
 
 <h1>
     Retrouvez vos discussions déjà créées
@@ -11,16 +8,12 @@
 
 
     <div *ngFor="let discussion of discussions">
-        <button id='button_discussions' (click)='entrerDiscussion(discussion)'>
+        <button class='button_discussions' (click)='entrerDiscussion(discussion)'>
         Discussion avec {{discussion}}
         </button>
     </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+<br style = 'line-height:6;'>
 
 <app-foot-bar></app-foot-bar>
