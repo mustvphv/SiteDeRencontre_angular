@@ -1,19 +1,19 @@
-#style_connexion{
+.style_connexion{
     color:red
     
     
 }
 
-#style_inscription{
+.style_inscription{
     color: green;
 }
 
 
-#titre_page_d_acceuil{
+.titre_page_d_acceuil{
     color: black
     
 }
 
-#style_button_page_acceuil{
+.style_button_page_acceuil{
     color: black;
 }
