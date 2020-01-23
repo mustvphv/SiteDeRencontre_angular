@@ -3,7 +3,7 @@ import { Repository, QueryRunner } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Chat } from './chat.entity';
 import { ChatModule } from './chat.module';
-import { stringLiteral } from '@babel/types';
+import { stringLiteral, anyTypeAnnotation } from '@babel/types';
 import { Message } from './message.entity';
 
 @Injectable()
@@ -59,7 +59,7 @@ export class ChatService {
         pseudoSource: string,
         pseudoDest: string,
         nouveauMessageTexte: string,
-        nouveauMessageDate: string): Promise<Message> {
+        nouveauMessageDate: string): Promise<any> {
 
         let discussion = await this.getDiscussionBySourceEtDest(pseudoSource, pseudoDest);
 
@@ -68,6 +68,18 @@ export class ChatService {
         message.discussion = discussion;
         message.messageTexte = nouveauMessageTexte;
         message.messageDate = nouveauMessageDate;
+
+
+
+        if ((await this.messageRepository.find()).length - 1 > 0 && (await this.messageRepository.find()).length - 1 !== undefined) {
+            if ((await this.messageRepository.find())[(await this.messageRepository.find()).length - 1].messageTexte === message.messageTexte
+            && (await this.messageRepository.find())[(await this.messageRepository.find()).length - 1].messageDate === message.messageDate
+            && (await this.messageRepository.find({ relations: ['discussion'] }))[(await this.messageRepository.find()).length - 1].discussion.id
+             === message.discussion.id
+            ) {
+                return 0;
+            }
+        }
 
         return await this.messageRepository.save(message);
 
